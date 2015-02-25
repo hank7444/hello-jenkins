@@ -8,6 +8,21 @@
   },
   "devDependencies": {
     "mocha": "1.20.1",
-    "supertest": "0.13.0"
+    "supertest": "0.13.0",
+    "chai": "*",
+    "gulp-mocha": "*",
+    "xunit-file": "*",
+    "gulp": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "gulp-filter": "*",
+    "browser-sync": "*",
+    "gulp-plumber": "*",
+    "map-stream": "*",
+    "event-stream": "*",
+    "gulp-tap": "*",
+    "gulp-rename": "*",
+    "gulp-coffee": "*",
+    "path": "*"
   }
 }

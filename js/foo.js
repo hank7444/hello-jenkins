@@ -5,6 +5,6 @@ var foo = (function(window, undefined) {
 		}
 	};
 })();
-// 1234 test again
+// 1234 test again haha 再來一次
 
 module.exports = foo;

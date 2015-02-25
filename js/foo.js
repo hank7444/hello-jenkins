@@ -5,5 +5,6 @@ var foo = (function(window, undefined) {
 		}
 	};
 })();
+// 1234
 
 module.exports = foo;

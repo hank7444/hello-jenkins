@@ -140,7 +140,8 @@ gulp.task('test-pure', function(cb) {
         }))
         .pipe(istanbul.hookRequire())
         .on('finish', function() {
-            gulp.src('./test_mocha_html/script/**/*.js')
+            //process.env.XUNIT_FILE = 'aaaxunit.xml';
+            gulp.src('./test_mocha/**/*.js')
                 .pipe(plumber())
                 .pipe(mocha({
                     reporter: 'xunit-file'
@@ -169,6 +170,7 @@ gulp.task('coverage', function() {
         .on('finish', function() {
 
             // 用PhantomJS做測試
+
             gulp.src('./test_mocha_html/**/*.html')
                 .pipe(plumber())
                 .pipe(mochaPhantomJS({

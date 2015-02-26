@@ -37,7 +37,7 @@ describe('apple測試', function() {
     
 	it('test apple.throwApple()', function() {
     	var result = apple.throwApple();
-    	expect(result).to.equal('oh you hurted me!1234');
+    	expect(result).to.equal('oh you hurted me!');
     });
 
 });

@@ -1,3 +1,4 @@
 #!/bin/sh
 
 gulp test
+python ./coverage/.lcov_cobertura.py ./coverage/lcov.info

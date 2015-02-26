@@ -16,10 +16,11 @@ var path = require('path');
 var fs = require('fs');
 
 var mocha = require('gulp-mocha');
+var istanbul = require('gulp-istanbul');
 
 var filefolder = {
-    'js': 'js/**/*.js',
-    'test': 'test_mocha/**/*.js',
+    'js': './js/**/*.js',
+    'test': './test_mocha/**/*.js',
     'html': 'html/**/*.html',
     'css': 'css/**/*.css',
     'sass': 'sass/**/*.{sass, scss}',
@@ -27,12 +28,58 @@ var filefolder = {
 };
 
 
+/*
+gulp.task('test', function (cb) {
 
-gulp.task('test', function() {
-    gulp.src(filefolder.test, {read: false})
-        .pipe(mocha({
+    gulp.src([filefolder.js])
+        .pipe(istanbul()) // Covering files
+        .pipe(istanbul.hookRequire()) // Force `require` to return covered files
+        .on('finish', function () {
+            console.log(12341234);
+            gulp.src(filefolder.test)
+            .pipe(mocha({
+                reporter: 'xunit-file'
+            }))
+            //.pipe(mocha());
+            .pipe(istanbul.writeReports()) // Creating the reports after tests runned
+            .on('end', cb);
+        });
+});*/
+
+/*
+gulp.task('test', function () {
+    return gulp.src('js/apple.js')
+      // Right there
+      .pipe(istanbul({includeUntested: true}))
+      .on('end', function () {
+        gulp.src('test_mocha/apple1.js')
+          
+          .pipe(istanbul.writeReports({
+            dir: './assets/unit-test-coverage',
+            reporters: [ 'lcov' ],
+            reportOpts: { dir: './assets/unit-test-coverage'}
+          }))
+          .pipe(mocha({reporter: 'spec'}));
+      });
+  });
+*/
+gulp.task('test', function (cb) {
+  return gulp.src([filefolder.js])
+      .pipe(istanbul({includeUntested: true}))
+      .pipe(istanbul.hookRequire())
+      .on('finish', function() {
+          gulp.src([filefolder.test])
+          .pipe(plumber())
+          .pipe(mocha({
             reporter: 'xunit-file'
-        }));
+          }))
+          .pipe(istanbul.writeReports({
+            dir: './coverage',
+            reportOpts: {
+              dir: './coverage'
+            },
+          }));
+      });
 });
 
 

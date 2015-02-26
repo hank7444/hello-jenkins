@@ -8,11 +8,11 @@ describe('apple測試', function() {
     	var result = apple.getApple();
     	expect(result).to.equal('hahaha! love');
     });
-
+    /*
     it('test apple.eatApple()', function() {
     	var result = apple.eatApple();
     	expect(result).to.equal('so sweet!');
-    });
+    });*/
 
 	it('test apple.throwApple()', function() {
     	var result = apple.throwApple();

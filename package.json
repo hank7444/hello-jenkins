@@ -24,6 +24,10 @@
     "gulp-tap": "*",
     "gulp-rename": "*",
     "gulp-coffee": "*",
-    "path": "*"
+    "path": "*",
+    "gulp-mocha-phantomjs": "^0.5.3",
+    "chai": "*",
+    "chai-jquery": "*",
+    "jquery": "*"
   }
 }

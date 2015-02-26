@@ -14,7 +14,7 @@ describe('apple測試', function() {
     	var result = apple.eatApple();
     	expect(result).to.equal('so sweet!');
     });*/
-
+    
 	it('test apple.throwApple()', function() {
     	var result = apple.throwApple();
     	expect(result).to.equal('oh you hurted me!');

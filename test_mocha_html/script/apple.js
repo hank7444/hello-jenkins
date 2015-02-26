@@ -25,19 +25,19 @@ describe('apple測試', function() {
 	
 	it('test apple.getApple()', function() {
     	var result = apple.getApple();
-    	expect(result).to.equal('you have an apple');
+    	expect(result).to.equal('you have an apple1234');
     });
     
     
     it('test apple.eatApple()', function() {
     	var result = apple.eatApple();
-    	expect(result).to.equal('so sweet!');
+    	expect(result).to.equal('so sweet!1234');
     });
 
     
 	it('test apple.throwApple()', function() {
     	var result = apple.throwApple();
-    	expect(result).to.equal('oh you hurted me!');
+    	expect(result).to.equal('oh you hurted me!1234');
     });
 
 });

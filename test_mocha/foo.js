@@ -10,7 +10,7 @@ describe('baseStorage測試', function() {
     	expect(result).to.equal(3);
     });
 
-    it('測試亂丟變數', function() {
+    it('測試亂丟變數 這是test_mocha', function() {
     	expect(foo.plus(1, null)).to.equal(NaN);
         expect(foo.plus(5, '10')).to.equal(15);
         expect(foo.plus('10', 5)).to.equal('15');

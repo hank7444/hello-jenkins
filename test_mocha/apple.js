@@ -6,7 +6,7 @@ describe('apple測試', function() {
 	
 	it('test apple.getApple()', function() {
     	var result = apple.getApple();
-    	expect(result).to.equal('you mama have an apple');
+    	expect(result).to.equal('you have an apple');
     });
     
     /*
@@ -17,6 +17,6 @@ describe('apple測試', function() {
     
 	it('test apple.throwApple()', function() {
     	var result = apple.throwApple();
-    	expect(result).to.equal('oh 12341234 you hurted me!');
+    	expect(result).to.equal('oh! you hurted me!');
     });
 });

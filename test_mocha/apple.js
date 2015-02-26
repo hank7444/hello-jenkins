@@ -3,12 +3,12 @@ var expect = require('chai').expect;
 var apple = require('../js/apple.js');
 
 describe('apple測試', function() {
-	/*
+	
 	it('test apple.getApple()', function() {
     	var result = apple.getApple();
-    	expect(result).to.equal('hahaha! love');
+    	expect(result).to.equal('you have an apple');
     });
-    */
+    
     /*
     it('test apple.eatApple()', function() {
     	var result = apple.eatApple();

@@ -118,7 +118,7 @@ function handleError(err) {
 // 一般網頁用的js模組 + 有DOM模組 testing
 // 遇到問題, 產生的xunit.xml會一直被覆蓋
 gulp.task('test', function() {
-    return gulp.src('./test_mocha_html/**/*.html')
+    return gulp.src('./test_mocha_html/apple.html')
         .pipe(plumber())
         .pipe(mochaPhantomJS({
             webSecurityEnabled: false,
@@ -140,7 +140,6 @@ gulp.task('test-pure', function(cb) {
         }))
         .pipe(istanbul.hookRequire())
         .on('finish', function() {
-            //process.env.XUNIT_FILE = 'aaaxunit.xml';
             gulp.src('./test_mocha/**/*.js')
                 .pipe(plumber())
                 .pipe(mocha({

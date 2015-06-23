@@ -20,7 +20,7 @@ else {
 }
 
 
-
+/*
 describe('apple測試', function() {
 	
 	it('test apple.getApple()', function() {
@@ -41,6 +41,7 @@ describe('apple測試', function() {
     });
 
 });
+*/
 
 
 if (typeof window === 'object' && window.mochaPhantomJS) { 
